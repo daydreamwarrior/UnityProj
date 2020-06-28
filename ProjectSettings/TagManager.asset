@@ -10,6 +10,8 @@ TagManager:
   - NoseworkB
   - UIBG
   - BoneEffect
+  - Bone
+  - Enemy2
   layers:
   - Default
   - TransparentFX
