@@ -19,7 +19,6 @@ public class BoneBehavior : MonoBehaviour
         //Boneffect.SetActive(false);
         BAni = GameObject.FindGameObjectWithTag("BoneEffect");
         BAni.GetComponent<Animation>().wrapMode=WrapMode.Once;
-        Right.eulerAngles = new Vector3(0, 0, 90);
         Skilled = false;
     }
 
@@ -42,13 +41,12 @@ public class BoneBehavior : MonoBehaviour
         {   
             var worldPos = Camera.main.ScreenToWorldPoint(MousePos);
             transform.position = Vector3.MoveTowards(transform.position, worldPos, BoneSpeed * Time.deltaTime);
-            transform.rotation = Quaternion.Slerp(transform.rotation, Right, Time.deltaTime * 5.0f);
-
+            transform.Rotate(new Vector3(0,0,90 * Time.deltaTime));
             if (transform.position == worldPos)
             {
                 BAni.transform.position = new Vector3(MousePos.x, MousePos.y, MousePos.y);
                 BAni.GetComponent<Animator>().SetTrigger("Bplay");
-                Invoke("SetInitPos", 2);
+                Invoke("SetInitPos", 1);
                 Skilled = false;
 
 

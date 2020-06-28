@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy2Spawn : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Enemy2Spawn : MonoBehaviour
                 randX = Random.Range(-25f, -5f);
                 randY = Random.Range(-3f, 10f);
                 Instantiate(E2, new Vector3(randX, randY, 0), Quaternion.identity);
+
             }
             else
             {

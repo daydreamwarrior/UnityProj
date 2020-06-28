@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy1Behaviors : MonoBehaviour
 {
-    public float Espeed = 2.0f;
+    public float Espeed = 1.0f;
+    public int E1Hp = 100;
     Vector3 PlayerPos = new Vector3 (0f, -4f, 0f);
 
     // Start is called before the first frame update
@@ -26,7 +27,13 @@ public class Enemy1Behaviors : MonoBehaviour
     {
         if (target.gameObject.tag == "Bone")
         {
-            Destroy(this.gameObject);
+            
+            if (this.E1Hp <= 0)
+            {
+                Destroy(this.gameObject);
+            }
+            this.E1Hp -= 50;
+            
         }
 
         if (target.gameObject.tag == "Player")

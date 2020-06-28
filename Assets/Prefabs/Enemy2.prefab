@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 820141397603951665}
   - component: {fileID: 6588594403096076787}
-  - component: {fileID: 4155147815500276645}
+  - component: {fileID: 9031244670290366106}
   m_Layer: 0
   m_Name: Enemy2
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4155147815500276645
+--- !u!114 &9031244670290366106
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,3 +94,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ea1f63eb4cfd744ae389cd9aca84a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Espeed: 3
+  E2CurHp: 100
+  MaxHp: 100
