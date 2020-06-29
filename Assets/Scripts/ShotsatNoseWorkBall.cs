@@ -5,7 +5,6 @@ using UnityEngine;
 public class ShotsatNoseWorkBall : MonoBehaviour
 {
     private IEnumerator co;
-    Vector3 MousePos = new Vector3();
     public float Shootspeed = 10.0f;
     Vector3 MovePos = new Vector3(1, 1, 0);
     // Start is called before the first frame update

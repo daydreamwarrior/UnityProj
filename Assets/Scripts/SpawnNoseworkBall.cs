@@ -35,7 +35,6 @@ public class SpawnNoseworkBall : MonoBehaviour
                 }
                 NumofNoseWorkBalls++;
             }
-            Debug.Log(NumofNoseWorkBalls);
         }
     }
 }

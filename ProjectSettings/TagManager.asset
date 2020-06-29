@@ -15,6 +15,7 @@ TagManager:
   - Noseworkball
   - Shots
   - hpbarE2
+  - hpe2
   layers:
   - Default
   - TransparentFX

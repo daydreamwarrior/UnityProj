@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6588594403096076787}
   - component: {fileID: 7364274192398270549}
   - component: {fileID: 3850644189267768812}
-  - component: {fileID: 4682216012824518200}
+  - component: {fileID: 2901477507106227056}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy2
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.64
---- !u!114 &4682216012824518200
+--- !u!114 &2901477507106227056
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,11 +130,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2841824130056360910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6ea1f63eb4cfd744ae389cd9aca84a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 354751c38a343cb499c16439ece7908c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gethpbar: {fileID: 0}
-  hpbar: {fileID: 0}
-  Espeed: 3
-  E2CurHp: 100
+  Gethpbar: {fileID: 8604495460680725090, guid: cb94a237a716a6748bab66d966e4f2c8,
+    type: 3}
   MaxHp: 100
+  Espeed: 3
