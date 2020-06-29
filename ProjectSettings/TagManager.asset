@@ -12,6 +12,8 @@ TagManager:
   - BoneEffect
   - Bone
   - Enemy2
+  - Noseworkball
+  - Shots
   layers:
   - Default
   - TransparentFX
