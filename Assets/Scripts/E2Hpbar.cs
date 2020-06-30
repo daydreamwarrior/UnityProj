@@ -11,11 +11,6 @@ public class E2Hpbar : MonoBehaviour
     List<GameObject> barlist = new List<GameObject>();
     Camera m_cam = null;
 
-    //public Slider E2HpSlider;
-    //float CurrentPos = 0.0f;
-    //float MaxHp = 100.0f;
-    // Start is called before the first frame update
-    //private Enemy2Behavior E2;
     void Start()
     {
         m_cam = Camera.main;

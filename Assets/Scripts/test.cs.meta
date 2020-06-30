@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 4f8960748de32394ca780be567203777
+guid: 8b743a903c8d2a44ca9020461cf2b4fb
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - HPPrefabs: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -8,6 +8,7 @@ public class E2Spawn : MonoBehaviour
     public GameObject E2;
     float randX, randY;
     int randMinusPlus;
+
     //public float Espeed = 3.0f;
     //Vector3 PlayerPos = new Vector3(0f, -4f, 0f);
     //public float MaxHp = 100;
@@ -15,7 +16,6 @@ public class E2Spawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
 
         for (int i = 0; i < 5; i++)
         {
