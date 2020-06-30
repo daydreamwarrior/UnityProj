@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShotsatNoseWorkBall : MonoBehaviour
 {
     private IEnumerator co;
-    public float Shootspeed = 10.0f;
+    public float Shootspeed = 3.0f;
     Vector3 MovePos = new Vector3(1, 1, 0);
     // Start is called before the first frame update
     void Start()
@@ -44,6 +44,10 @@ public class ShotsatNoseWorkBall : MonoBehaviour
             }
             yield return new WaitForSeconds(1);
         }
+    }
+    private void OnBecameInvisible()
+    {
+        Destroy(this.gameObject);
     }
 }
 
