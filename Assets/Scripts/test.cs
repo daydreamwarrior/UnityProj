@@ -7,11 +7,12 @@ public class test : MonoBehaviour
 {
     //public  Gethpbar;
     public Image hpbar;
-    float CurHp = 100f;
+    int CurHp = 100;
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        Debug.Log("현재" + CurHp);
         hpbar = GetComponent<Image>();
         //GameObject Gethpbar = GameObject.FindGameObjectWithTag("hpe2");
         //hpbar =Gethpbar.GetComponent<Image>();
@@ -20,21 +21,18 @@ public class test : MonoBehaviour
 
     void Update()
     {
-       
-    }
-
-    void OnTriggerEnter2D(Collider2D target)
-    {
-        if (target.gameObject.tag == "Shots")
+        if (Input.GetKeyDown(KeyCode.A))
         {
-
-            Debug.Log("들어옴");
+            CurHp = 100;
+            Application.Quit();
         }
     }
-    public void Damaged()
+
+    
+    public void Damaged(float dmg)
     {
-        //Debug.Log("들어옴");
-        hpbar.fillAmount = 40f / CurHp;
-        CurHp = CurHp - 40f;
+        CurHp-=10;
+        this.hpbar.fillAmount = CurHp * 0.01f;
+        Debug.Log(CurHp);
     }
 }
