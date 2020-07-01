@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //Q스킬:뼈다귀 부메랑.
 public class BoneBehavior : MonoBehaviour
 {
     GameObject BAni;
+    public Image BoneSkill;
     public float BoneSpeed = 20.0f;
     private Quaternion Right = Quaternion.identity;
     Vector3 InitPos = new Vector3 (0f, -5f, 0f);
@@ -16,6 +18,7 @@ public class BoneBehavior : MonoBehaviour
     
     void Start()
     {
+        BoneSkill.fillAmount = 1.0f;
         //Boneffect.SetActive(false);
         BAni = GameObject.FindGameObjectWithTag("BoneEffect");
         BAni.GetComponent<Animation>().wrapMode=WrapMode.Once;
@@ -28,8 +31,8 @@ public class BoneBehavior : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             if (Input.GetKeyDown(KeyCode.Q))
-
             {
+                BoneSkill.fillAmount = 0.0f;
                 MousePos = Input.mousePosition;
                 Skilled = true;
 
@@ -52,7 +55,10 @@ public class BoneBehavior : MonoBehaviour
 
             }
         }
-
+        if (BoneSkill.fillAmount < 1.0f)
+        {
+            BoneSkill.fillAmount += 0.007f;
+        }
     }
     void SetInitPos()
     {

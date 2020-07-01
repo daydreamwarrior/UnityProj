@@ -17,23 +17,36 @@ public class SpawnEnemy1 : MonoBehaviour
             {
                 randX = Random.Range(-25f, -5f);
                 randY = Random.Range(-3f, 10f);
-                Debug.Log(randX);
                 Instantiate(E1, new Vector3(randX, randY, 0), Quaternion.identity);
             }
             else
             {
                 randX = Random.Range(5f, 25f);
                 randY = Random.Range(-3f, 10f);
-                Debug.Log(randX);
                 Instantiate(E1, new Vector3(randX, randY, 0), Quaternion.identity);
             }
         }
     }
-
+    void NewPrefabs()
+    {
+        randMinusPlus = Random.Range(0, 2);
+        if (randMinusPlus == 0)//왼쪽(마이너스)
+        {
+            randX = Random.Range(-25f, -5f);
+            randY = Random.Range(-3f, 10f);
+            Instantiate(E1, new Vector3(randX, randY, 0), Quaternion.identity);
+        }
+        else
+        {
+            randX = Random.Range(5f, 25f);
+            randY = Random.Range(-3f, 10f);
+            Instantiate(E1, new Vector3(randX, randY, 0), Quaternion.identity);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
-        
+        //if(Enemy1Behaviors.)
     }
 
 }

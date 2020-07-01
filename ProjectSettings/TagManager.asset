@@ -16,6 +16,8 @@ TagManager:
   - Shots
   - hpbarE2
   - hpe2
+  - Qskill
+  - Under
   layers:
   - Default
   - TransparentFX

@@ -22,7 +22,6 @@ public class SpawnShots : MonoBehaviour
     {
         while (true)
         {
-            Debug.Log("코루틴~");
             if (SpawnNoseworkBall.NumofNoseWorkBalls == 1)
             {
                 Instantiate(Shots, new Vector3(SpawnNoseworkBall.Poses[0].x, SpawnNoseworkBall.Poses[0].y, 0), Quaternion.identity);
