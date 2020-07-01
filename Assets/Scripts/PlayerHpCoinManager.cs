@@ -29,7 +29,7 @@ public class PlayerHpCoinManager : MonoBehaviour
         if (PlayerHp <= 1)
         {
             //Debug.Log("게임오버");
-            SceneManager.LoadScene("GameOver");
+            //SceneManager.LoadScene("GameOver");
         }
         TextPlayerMoney.text = PlayerMoney.ToString();
         PlayerHpImage.fillAmount = PlayerHp / CurHp;
