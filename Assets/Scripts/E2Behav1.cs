@@ -13,6 +13,7 @@ public class E2Behav1 : MonoBehaviour
     private float Hp;
     public Image Hpbar;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,13 +57,20 @@ public class E2Behav1 : MonoBehaviour
         }
         if (target.gameObject.tag == "Player")
         {
-            PlayerHpCoinManager.PlayerHp -= 30;
+            PlayerHpCoinManager.PlayerHp -= 33;
+            TransformNewPos();
         }
+        
     }
     void TransformNewPos()
     {
         Destroy(this.gameObject);
         GameObject.Find("Coins").GetComponent<SpawnCoin>().SetRandomCoins(transform.position);
         GameObject.Find("Enemy2").GetComponent<E2Spawn>().NewPrefabs();
+    }
+    void OnParticleCollision(GameObject other)
+    {
+        Debug.Log("파티클 충돌");
+
     }
 }

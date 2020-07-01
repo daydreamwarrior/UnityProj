@@ -14,11 +14,17 @@ TagManager:
   - Enemy2
   - Noseworkball
   - Shots
-  - hpbarE2
   - hpe2
   - Qskill
   - Under
   - Coins
+  - BuyB
+  - InfoT
+  - InfoL
+  - InfoN
+  - LanB
+  - part
+  - PlayerHeart
   layers:
   - Default
   - TransparentFX
@@ -28,7 +34,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Enemys
   - 
   - 
   - 

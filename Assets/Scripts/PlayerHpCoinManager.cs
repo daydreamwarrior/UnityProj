@@ -2,34 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHpCoinManager : MonoBehaviour
 {
-    public GameObject PlayerHeart;
+    public Image PlayerHpImage;
     public Text TextPlayerMoney;
-    bool Draw = true;
-    public static float PlayerHp = 100;
+    public static float PlayerHp;
+    public float CurHp = 100;
     public static int PlayerMoney=0;
     
     // Start is called before the first frame update
     private void Awake()
     {
-        while (Draw)
-        {
-            Instantiate(PlayerHeart, new Vector3(-7.0f, 4.3f, 0.0f), Quaternion.identity);
-            Instantiate(PlayerHeart, new Vector3(-6.0f, 4.3f, 0.0f), Quaternion.identity);
-            Draw = false;
-        }
+        
     }
 
     void Start()
     {
-        
+        PlayerHp = CurHp;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (PlayerHp <= 1)
+        {
+            //Debug.Log("게임오버");
+            SceneManager.LoadScene("GameOver");
+        }
         TextPlayerMoney.text = PlayerMoney.ToString();
+        PlayerHpImage.fillAmount = PlayerHp / CurHp;
     }
 }

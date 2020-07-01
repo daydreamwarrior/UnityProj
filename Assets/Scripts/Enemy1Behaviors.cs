@@ -33,20 +33,20 @@ public class Enemy1Behaviors : MonoBehaviour
     {
         if (target.gameObject.tag == "Bone"|| target.gameObject.tag == "Shots")
         {
-            Destroy(this.gameObject);
+            
             TransformNewPos();
         }
 
         if (target.gameObject.tag == "Player")
         {
-            Destroy(this.gameObject);
+            PlayerHpCoinManager.PlayerHp -= 33;
             TransformNewPos();
         }
 
     }
     void TransformNewPos()
     {
-        Debug.Log("들어dhkEK");
+        Destroy(this.gameObject);
         GameObject.Find("Enemy1").GetComponent<SpawnEnemy1>().NewPrefabs();
         SetInit();
         

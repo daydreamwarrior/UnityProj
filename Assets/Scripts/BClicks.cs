@@ -4,60 +4,88 @@ using UnityEngine;
 
 public class BClicks : MonoBehaviour
 {
-    bool CointoItemclicked = false;
+    bool opened = false;
 
-    GameObject TempLB, TempNB, TempBG;
-   
+    GameObject LB, NB, BG, BB, IT;
+    GameObject IN, IL;
+
     // Start is called before the first frame update
     void Start()
     {
-        TempBG = GameObject.FindWithTag("UIBG");
-        TempLB = GameObject.FindWithTag("LanternB");
-        TempNB = GameObject.FindWithTag("NoseworkB");
+        BG = GameObject.FindWithTag("UIBG");
+        NB = GameObject.FindWithTag("NoseworkB");
+        BB = GameObject.FindWithTag("BuyB");
+        IT = GameObject.FindWithTag("InfoT");
+        IN = GameObject.FindWithTag("InfoN");
+        IL = GameObject.FindWithTag("InfoL");
 
-        TempLB.SetActive(false);
-        TempNB.SetActive(false);
-        TempBG.SetActive(false);
+        NB.SetActive(false);
+        BG.SetActive(false);
+        BB.SetActive(false);
+        IT.SetActive(false);
+        IN.SetActive(false);
+        IL.SetActive(false);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (CointoItemclicked == true)
-        {
-            TempLB.SetActive(true);
-            TempNB.SetActive(true);
-            TempBG.SetActive(true);
-        }
-        else
-        {
-            TempLB.SetActive(false);
-            TempNB.SetActive(false);
-            TempBG.SetActive(false);
-        }
+
     }
 
-    public void CointoItemButton()
+    public void OnClickCointoItem()
     {
-        if (CointoItemclicked == false)
+
+        if (opened == false)
         {
-            CointoItemclicked = true;
-            Time.timeScale = 0;
-            
+
+            OpenShop();
+
         }
 
-        else
+        if (opened == true)
         {
-            CointoItemclicked = false;
-            Time.timeScale = 1.0f;
+            
+            CloseShop();
         }
 
         Time.fixedDeltaTime = 0.02F * Time.timeScale;
 
     }
+
+    public void OpenShop()
+    {
+        Debug.Log("열림!");
+        opened = true;
+        Time.timeScale = 0;
+        NB.SetActive(true);
+        BG.SetActive(true);
+        BB.SetActive(true);
+        IT.SetActive(true);
+    }
+    public void CloseShop()
+    {
+        opened = false;
+        Time.timeScale = 1.0f;
+
+        NB.SetActive(false);
+        BG.SetActive(false);
+        BB.SetActive(false);
+        IT.SetActive(false);
+        
+    }
+
+
     public void OnClickNosework()
     {
+        IN.SetActive(true);
+        IL.SetActive(false);
+    }
 
+    public void OnClickLantern()
+    {
+        IN.SetActive(false);
+        IL.SetActive(true);
     }
 }
