@@ -8,12 +8,11 @@ public class E2Behav1 : MonoBehaviour
 {
     Vector3 PlayerPos = new Vector3(0f, -4f, 0f);
     Vector3 InitPos = new Vector3(0f, -5f, 0f);
-    public float Espeed = 3.0f;
+    public float Espeed = 1.0f;
     public float CurHp = 100;
     private float Hp;
     public Image Hpbar;
-    float randX, randY;
-    int randMinusPlus;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +36,7 @@ public class E2Behav1 : MonoBehaviour
     {
         if (Hp <= 0)
         {
-            Invoke("TransformNewPos", 1);
+            TransformNewPos();
         }
         transform.position = Vector3.MoveTowards(transform.position, PlayerPos, Espeed * Time.deltaTime);
     }
@@ -55,24 +54,15 @@ public class E2Behav1 : MonoBehaviour
             Hp -= 30.0f;
             Hpbar.fillAmount = Hp / CurHp;
         }
+        if (target.gameObject.tag == "Player")
+        {
+            PlayerHpCoinManager.PlayerHp -= 30;
+        }
     }
     void TransformNewPos()
     {
-        randMinusPlus = Random.Range(0, 2);
-        if (randMinusPlus == 0)//왼쪽(마이너스)
-        {
-            randX = Random.Range(-25f, -5f);
-            randY = Random.Range(-3f, 10f);
-            transform.position = new Vector3(randX, randY, 0);
-            SetInit();
-        }
-        else
-        {
-            randX = Random.Range(5f, 25f);
-            randY = Random.Range(-3f, 10f);
-            transform.position = new Vector3(randX, randY, 0);
-            Hp = CurHp;
-
-        }
+        Destroy(this.gameObject);
+        GameObject.Find("Coins").GetComponent<SpawnCoin>().SetRandomCoins(transform.position);
+        GameObject.Find("Enemy2").GetComponent<E2Spawn>().NewPrefabs();
     }
 }

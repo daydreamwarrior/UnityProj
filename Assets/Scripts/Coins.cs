@@ -4,27 +4,26 @@ using UnityEngine;
 
 public class Coins : MonoBehaviour
 {
-    public GameObject Coin;
-    float randX, randY;
-    int randMinusPlus;
+    float CoinSpeed = 5.0f;
+    Vector3 CurCoinUI = new Vector3(7.5f, 4.0f, 0.0f);
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 5; i++)
-        {
-            randMinusPlus = Random.Range(0, 2);
-            if (randMinusPlus == 0)//왼쪽(마이너스)
-            {
-                randX = Random.Range(-25f, -5f);
-                randY = Random.Range(-3f, 10f);
-                Debug.Log(randX);
-                Instantiate(Coin, new Vector3(randX, randY, 0), Quaternion.identity);
-            }
-        }
     }
     // Update is called once per frame
     void Update()
     {
+        if (transform.position == CurCoinUI)
+        {
+            Destroy(this.gameObject);
+        }
+       
+         transform.position = Vector3.MoveTowards(transform.position, CurCoinUI, CoinSpeed * Time.deltaTime);
+       
+    }
+    public void ClickCoin()
+    {
         
     }
+    
 }

@@ -19,21 +19,7 @@ public class E2Spawn : MonoBehaviour
 
         for (int i = 0; i < 5; i++)
         {
-            randMinusPlus = Random.Range(0, 2);
-            if (randMinusPlus == 0)//왼쪽(마이너스)
-            {
-                randX = Random.Range(-25f, -5f);
-                randY = Random.Range(-3f, 10f);
-                Debug.Log(randX);
-                Instantiate(E2, new Vector3(randX, randY, 0), Quaternion.identity);
-            }
-            else
-            {
-                randX = Random.Range(5f, 25f);
-                randY = Random.Range(-3f, 10f);
-                Debug.Log(randX);
-                Instantiate(E2, new Vector3(randX, randY, 0), Quaternion.identity);
-            }
+            NewPrefabs();
         }
     }
     // Update is called once per frame
@@ -41,5 +27,20 @@ public class E2Spawn : MonoBehaviour
     {
 
     }
-
+    public void NewPrefabs()
+    {
+        randMinusPlus = Random.Range(0, 2);
+        if (randMinusPlus == 0)//왼쪽(마이너스)
+        {
+            randX = Random.Range(-25f, -5f);
+            randY = Random.Range(-3f, 10f);
+            Instantiate(E2, new Vector3(randX, randY, 0), Quaternion.identity);
+        }
+        else
+        {
+            randX = Random.Range(5f, 25f);
+            randY = Random.Range(-3f, 10f);
+            Instantiate(E2, new Vector3(randX, randY, 0), Quaternion.identity);
+        }
+    }
 }

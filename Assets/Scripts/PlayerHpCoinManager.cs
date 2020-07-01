@@ -7,8 +7,9 @@ public class PlayerHpCoinManager : MonoBehaviour
 {
     public GameObject PlayerHeart;
     public Text TextPlayerMoney;
-    public int PlayerMoney;
     bool Draw = true;
+    public static float PlayerHp = 100;
+    public static int PlayerMoney=0;
     
     // Start is called before the first frame update
     private void Awake()
@@ -23,12 +24,12 @@ public class PlayerHpCoinManager : MonoBehaviour
 
     void Start()
     {
-        TextPlayerMoney.text = "0";
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        TextPlayerMoney.text = PlayerMoney.ToString();
     }
 }

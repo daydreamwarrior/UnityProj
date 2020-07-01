@@ -18,6 +18,7 @@ TagManager:
   - hpe2
   - Qskill
   - Under
+  - Coins
   layers:
   - Default
   - TransparentFX

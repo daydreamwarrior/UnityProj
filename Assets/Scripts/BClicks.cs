@@ -56,4 +56,8 @@ public class BClicks : MonoBehaviour
         Time.fixedDeltaTime = 0.02F * Time.timeScale;
 
     }
+    public void OnClickNosework()
+    {
+
+    }
 }
