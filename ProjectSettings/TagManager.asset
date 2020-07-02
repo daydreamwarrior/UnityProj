@@ -26,6 +26,7 @@ TagManager:
   - part
   - PlayerHeart
   - Space
+  - Paw
   layers:
   - Default
   - TransparentFX

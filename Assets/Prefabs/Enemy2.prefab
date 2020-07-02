@@ -307,5 +307,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Espeed: 1
-  CurHp: 80
+  CurHp: 100
   Hpbar: {fileID: 211282994344723450}

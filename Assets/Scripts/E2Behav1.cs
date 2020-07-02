@@ -47,20 +47,25 @@ public class E2Behav1 : MonoBehaviour
         if (target.gameObject.tag == "Shots")
         {
             Hp -= 60.0f;
-            Hpbar.fillAmount = Hp/CurHp;
+            Hpbar.fillAmount = Hp / CurHp;
 
         }
         if (target.gameObject.tag == "Bone")
         {
-            Hp -= 30.0f;
+            Hp -= 40.0f;
             Hpbar.fillAmount = Hp / CurHp;
         }
-
+        if (target.gameObject.tag == "Paw")
+        {
+            Hp -= 20.0f;
+            Hpbar.fillAmount = Hp / CurHp;
+        }
         if (target.gameObject.tag == "Player")
         {
             PlayerHpCoinManager.PlayerHp -= 10;
         }
-        
+
+
     }
     void TransformNewPos()
     {

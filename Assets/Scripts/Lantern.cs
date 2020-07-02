@@ -6,10 +6,13 @@ using UnityEngine.UI;
 public class Lantern : MonoBehaviour
 {
     public ParticleSystem LightsPart;
+    //public GameObject E2;
+    //Image E2HP;
     public Image LanSkill;
     float LanSpeed = 3.0f;
     Vector3 LanternPos = new Vector3(0, -2, 0);
     bool skilled = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,7 @@ public class Lantern : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, LanternPos, LanSpeed * Time.deltaTime);
             
+            
         }
         if (skilled == false)
         {
@@ -47,6 +51,7 @@ public class Lantern : MonoBehaviour
         transform.localScale = new Vector3(2f, 2f, 2f);
         LightsPart.Play();
         skilled = false;
+        
         
     }
     

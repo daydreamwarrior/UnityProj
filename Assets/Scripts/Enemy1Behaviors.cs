@@ -31,7 +31,7 @@ public class Enemy1Behaviors : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D target)
     {
-        if (target.gameObject.tag == "Bone"|| target.gameObject.tag == "Shots")
+        if (target.gameObject.tag == "Bone"|| target.gameObject.tag == "Shots"|| target.gameObject.tag == "Paw")
         {
             
             TransformNewPos();
