@@ -1732,7 +1732,6 @@ GameObject:
   - component: {fileID: 1165370339}
   - component: {fileID: 1165370341}
   - component: {fileID: 1165370340}
-  - component: {fileID: 1165370342}
   - component: {fileID: 1165370343}
   m_Layer: 0
   m_Name: LightsParticle
@@ -6535,18 +6534,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &1165370342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165370338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d0c2c52e389a6046af3c0b53eba98d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1165370343
 Rigidbody2D:
   serializedVersion: 4
@@ -7176,6 +7163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db43540fe3854d64bad936c6a8d28d94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IN: {fileID: 70868458}
+  SP: {fileID: 1681983044}
 --- !u!114 &1437130303
 MonoBehaviour:
   m_ObjectHideFlags: 0

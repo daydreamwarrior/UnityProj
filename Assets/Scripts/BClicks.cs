@@ -6,7 +6,7 @@ public class BClicks : MonoBehaviour
 {
     int opened = 0;
 
-    GameObject NB, BG, IT,LB;
+    GameObject NB, BG, IT, LB,IN,SP;
 
     // Start is called before the first frame update
     void Start()
@@ -15,8 +15,10 @@ public class BClicks : MonoBehaviour
         NB = GameObject.FindWithTag("NoseworkB");
         LB = GameObject.FindWithTag("LanternB");
         IT = GameObject.FindWithTag("InfoT");
- 
-        
+        IN = GameObject.FindWithTag("InfoN");
+        SP = GameObject.FindWithTag("Space");
+
+
         BG.SetActive(false);
         NB.SetActive(false);
         LB.SetActive(false);
@@ -33,19 +35,19 @@ public class BClicks : MonoBehaviour
 
     public void OnClickCointoItem()
     {
-        
+
         opened++;
         Debug.Log(opened % 2);
-        if (opened %2==1)
+        if (opened % 2 == 1)
         {
 
             OpenShop();
 
         }
 
-        if (opened%2==0)
+        if (opened % 2 == 0)
         {
-            
+
             CloseShop();
         }
 
@@ -55,7 +57,6 @@ public class BClicks : MonoBehaviour
 
     public void OpenShop()
     {
-        Debug.Log("열림!");
         Time.timeScale = 0;
         BG.SetActive(true);
         NB.SetActive(true);
@@ -65,14 +66,15 @@ public class BClicks : MonoBehaviour
 
     public void CloseShop()
     {
-        Debug.Log("닫힘!");
         Time.timeScale = 1.0f;
         BG.SetActive(false);
         NB.SetActive(false);
         LB.SetActive(false);
         IT.SetActive(false);
+        IN.SetActive(false);
+        SP.SetActive(false);
 
-        
+
     }
 
 }

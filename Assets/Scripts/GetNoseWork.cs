@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class GetNoseWork : MonoBehaviour
 {
-    GameObject IN,SP;
+    GameObject IN, SP;
     public Image WSkill;
     Color col;
-    bool BuyNS=false;
-    public static bool SetNS=false;
+    bool BuyNS = false;
+    public static bool SetNS = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +25,7 @@ public class GetNoseWork : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (BuyNS==true&&Input.GetKeyDown(KeyCode.Space)&& PlayerHpCoinManager.PlayerMoney>=10)
+        if (BuyNS == true && Input.GetKeyDown(KeyCode.Space) && PlayerHpCoinManager.PlayerMoney >= 10)
         {
             PlayerHpCoinManager.PlayerMoney -= 10;
             BuyNS = false;
@@ -43,5 +43,5 @@ public class GetNoseWork : MonoBehaviour
         IN.SetActive(true);
         SP.SetActive(true);
     }
-    
+
 }
