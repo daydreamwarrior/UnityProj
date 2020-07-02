@@ -4,27 +4,24 @@ using UnityEngine;
 
 public class BClicks : MonoBehaviour
 {
-    bool opened = false;
+    int opened = 0;
 
-    GameObject LB, NB, BG, BB, IT;
-    GameObject IN, IL;
+    GameObject NB, BG, IT,LB;
 
     // Start is called before the first frame update
     void Start()
     {
         BG = GameObject.FindWithTag("UIBG");
         NB = GameObject.FindWithTag("NoseworkB");
-        BB = GameObject.FindWithTag("BuyB");
+        LB = GameObject.FindWithTag("LanternB");
         IT = GameObject.FindWithTag("InfoT");
-        IN = GameObject.FindWithTag("InfoN");
-        IL = GameObject.FindWithTag("InfoL");
-
-        NB.SetActive(false);
+ 
+        
         BG.SetActive(false);
-        BB.SetActive(false);
+        NB.SetActive(false);
+        LB.SetActive(false);
         IT.SetActive(false);
-        IN.SetActive(false);
-        IL.SetActive(false);
+
 
     }
 
@@ -36,15 +33,17 @@ public class BClicks : MonoBehaviour
 
     public void OnClickCointoItem()
     {
-
-        if (opened == false)
+        
+        opened++;
+        Debug.Log(opened % 2);
+        if (opened %2==1)
         {
 
             OpenShop();
 
         }
 
-        if (opened == true)
+        if (opened%2==0)
         {
             
             CloseShop();
@@ -57,35 +56,23 @@ public class BClicks : MonoBehaviour
     public void OpenShop()
     {
         Debug.Log("열림!");
-        opened = true;
         Time.timeScale = 0;
-        NB.SetActive(true);
         BG.SetActive(true);
-        BB.SetActive(true);
+        NB.SetActive(true);
+        LB.SetActive(true);
         IT.SetActive(true);
     }
+
     public void CloseShop()
     {
-        opened = false;
+        Debug.Log("닫힘!");
         Time.timeScale = 1.0f;
-
-        NB.SetActive(false);
         BG.SetActive(false);
-        BB.SetActive(false);
+        NB.SetActive(false);
+        LB.SetActive(false);
         IT.SetActive(false);
+
         
     }
 
-
-    public void OnClickNosework()
-    {
-        IN.SetActive(true);
-        IL.SetActive(false);
-    }
-
-    public void OnClickLantern()
-    {
-        IN.SetActive(false);
-        IL.SetActive(true);
-    }
 }
