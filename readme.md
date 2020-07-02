@@ -7,21 +7,22 @@ Edit 2020.07.02
 
 2.게임 조작방법  
 마우스 타겟팅+Q: 마우스 좌표로 뼈다귀 날리기  
-10코인을 모으면 코인 교환을 통해 노즈워크 볼을 살 수 있음  
+W:10코인을 모으면 코인 교환을 통해 노즈워크 볼을 살 수 있음  
 (최초 구매시 궤도에 클릭하여 장착, 이후 쿨타임마다 클릭 후 W키 눌러서 추가, 최대 3개까지)  
 E:랜턴 사용  
+R:발바닥 공격. 범위내 전체 적에게 소량의 데미지를 줌  
 유령은 공격 종류에 상관 없이 바로 사라지며(HP바 없음),  
 고양이 귀신은 HP가 다 닳을때까지 공격해야 사라짐  
 코인은 적을 처치하면 자동으로 추가됨.  
-배경의 달이 뜨고 질 때까지 버티면 승리함.
+배경의 달이 뜨고 질 때까지 버티면 승리함.(약 1분 30여초)  
 
 
 3.이용 에셋  
 인게임 배경 음악: Minigame Results from Kirby Star Allies  
 GameOver씬 배경 음악:Lost Life from Kirby Star Allies  
 Win씬 배경 음악: Dream Friends Adeleine&Ribbon from Kirby Star Allies  
-Title씬 배경 음악: Puzzle room from Kirby Star Allies
-이외 스프라이트 자체 제작
+Title씬 배경 음악: Puzzle room from Kirby Star Allies  
+이외 스프라이트 자체 제작  
 
 4.핵심 기술 설명  
 적과 같은 경우 프리팹을 통해 일정한 개수를 게임에서 유지하도록 제거하고 생성하는 것을 반복함  
@@ -33,4 +34,4 @@ Title씬 배경 음악: Puzzle room from Kirby Star Allies
 
 
 5.강의내용 적용 기술  
-프리팹, GUI, 코루틴, Transform과 vector, 스프라이트와 rigidbody/ colider, 빌드
+프리팹, GUI, 코루틴, Transform과 vector, 스프라이트와 rigidbody/ colider, 빌드  
