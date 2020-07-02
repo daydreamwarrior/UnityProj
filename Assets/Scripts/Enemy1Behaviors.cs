@@ -39,7 +39,7 @@ public class Enemy1Behaviors : MonoBehaviour
 
         if (target.gameObject.tag == "Player")
         {
-            PlayerHpCoinManager.PlayerHp -= 33;
+            PlayerHpCoinManager.PlayerHp -= 5;
             TransformNewPos();
         }
 
@@ -47,6 +47,7 @@ public class Enemy1Behaviors : MonoBehaviour
     void TransformNewPos()
     {
         Destroy(this.gameObject);
+        GameObject.Find("Coins").GetComponent<SpawnCoin>().SetRandomCoins(transform.position);
         GameObject.Find("Enemy1").GetComponent<SpawnEnemy1>().NewPrefabs();
         SetInit();
         

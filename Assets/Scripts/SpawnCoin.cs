@@ -20,7 +20,7 @@ public class SpawnCoin : MonoBehaviour
     public void SetRandomCoins(Vector3 EnemyPos)
     {
         Vector3 CoinPos = EnemyPos;
-        NumofCoins = Random.Range(1, 5);
+        NumofCoins = Random.Range(2, 7);
         Instantiate(Coin, CoinPos, Quaternion.identity);
         PlayerHpCoinManager.PlayerMoney += NumofCoins;
     }

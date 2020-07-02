@@ -46,7 +46,7 @@ public class E2Behav1 : MonoBehaviour
     {
         if (target.gameObject.tag == "Shots")
         {
-            Hp -= 50.0f;
+            Hp -= 60.0f;
             Hpbar.fillAmount = Hp/CurHp;
 
         }
@@ -55,10 +55,10 @@ public class E2Behav1 : MonoBehaviour
             Hp -= 30.0f;
             Hpbar.fillAmount = Hp / CurHp;
         }
+
         if (target.gameObject.tag == "Player")
         {
-            PlayerHpCoinManager.PlayerHp -= 33;
-            TransformNewPos();
+            PlayerHpCoinManager.PlayerHp -= 10;
         }
         
     }

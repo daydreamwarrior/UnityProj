@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GetNoseWork : MonoBehaviour
 {
-    GameObject IN;
+    GameObject IN,SP;
     public Image WSkill;
     Color col;
     bool BuyNS=false;
@@ -14,7 +14,9 @@ public class GetNoseWork : MonoBehaviour
     void Start()
     {
         IN = GameObject.FindWithTag("InfoN");
+        SP = GameObject.FindWithTag("Space");
         IN.SetActive(false);
+        SP.SetActive(false);
         col = WSkill.color;
         col.a = 0.2f;
         WSkill.color = col;
@@ -31,6 +33,7 @@ public class GetNoseWork : MonoBehaviour
             col.a = 1.0f;
             WSkill.color = col;
             IN.SetActive(false);
+            SP.SetActive(false);
         }
     }
 
@@ -38,6 +41,7 @@ public class GetNoseWork : MonoBehaviour
     {
         BuyNS = true;
         IN.SetActive(true);
+        SP.SetActive(true);
     }
     
 }

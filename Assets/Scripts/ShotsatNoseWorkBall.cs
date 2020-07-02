@@ -44,13 +44,16 @@ public class ShotsatNoseWorkBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(co);
+        if (SpawnShots.first)
+        {
+            StartCoroutine(co);
+        }
         
 
         if (SpawnShots.second)
         {
             StartCoroutine(co2);
-            
+
         }
         if (SpawnShots.third)
         {
@@ -60,10 +63,10 @@ public class ShotsatNoseWorkBall : MonoBehaviour
 
     IEnumerator Shoot1()
     {
+        
         while (true)
         {
-            //InitPos = SpawnNoseworkBall.Poses[0];
-            if (SpawnShots.shotlist[0].transform.position.x>0)
+            if (SpawnShots.shotlist[0].transform.position.x > 0)
             {
                 InitPos = SpawnNoseworkBall.Poses[0];
                 SpawnShots.shotlist[0].transform.Translate(new Vector3(1, 1, 0) * Shootspeed * 0.02f);
@@ -72,8 +75,8 @@ public class ShotsatNoseWorkBall : MonoBehaviour
             {
                 SpawnShots.shotlist[0].transform.Translate(new Vector3(-1, 1, 0) * Shootspeed * 0.02f);
             }
-            
-            yield return new WaitForSeconds(1);
+
+            yield return new WaitForSeconds(3);
             StopCoroutine(co);
         }
     }
@@ -90,7 +93,7 @@ public class ShotsatNoseWorkBall : MonoBehaviour
             {
                 SpawnShots.shotlist[1].transform.Translate(new Vector3(-1, 1, 0) * Shootspeed * 0.02f);
             }
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(3);
             StopCoroutine(co2);
         }
     }
@@ -106,14 +109,14 @@ public class ShotsatNoseWorkBall : MonoBehaviour
             {
                 SpawnShots.shotlist[2].transform.Translate(new Vector3(-1, 1, 0) * Shootspeed * 0.02f);
             }
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(3);
             StopCoroutine(co3);
         }
     }
 
     private void OnBecameInvisible()
     {
-        if(this.gameObject== SpawnShots.shotlist[0])
+        if (this.gameObject == SpawnShots.shotlist[0])
         {
             SpawnShots.shotlist[0].transform.position = SpawnNoseworkBall.Poses[0];
         }

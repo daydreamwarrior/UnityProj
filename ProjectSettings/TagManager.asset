@@ -25,6 +25,7 @@ TagManager:
   - LanB
   - part
   - PlayerHeart
+  - Space
   layers:
   - Default
   - TransparentFX

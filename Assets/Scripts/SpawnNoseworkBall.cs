@@ -47,7 +47,7 @@ public class SpawnNoseworkBall : MonoBehaviour
 
         if (WSkill.fillAmount < 1.0f)
         {
-            WSkill.fillAmount += 0.005f;
+            WSkill.fillAmount += 0.0005f;
         }
     }
     void InstBall()

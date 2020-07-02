@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class MoonMove : MonoBehaviour
 { 
     Vector3 MoonStart; 
@@ -11,7 +11,7 @@ public class MoonMove : MonoBehaviour
     float vz;
     bool Move = true;
     float Speed;
-    float GameTime = 50.0f;
+    float GameTime = 40.0f;
     void Start () {
 
         time = Time.time;
@@ -38,7 +38,7 @@ public class MoonMove : MonoBehaviour
         if (target.gameObject.tag == "Under")
         {
             Move = false;
-            //게임 종료 씬으로 넘어가도록
+            SceneManager.LoadScene("WinScene");
         }
     }
 } 
